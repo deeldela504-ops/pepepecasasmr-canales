@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mis Canales</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    background:black;
+    font-family:Arial, Helvetica, sans-serif;
+    color:white;
+    text-align:center;
+    overflow-x:hidden;
+}
+
+/* Animación */
+@keyframes bajar {
+    0%{transform:translateY(-200px); opacity:0;}
+    100%{transform:translateY(0); opacity:1;}
+}
+
+.contenido{
+    animation:bajar 1.5s ease-out;
+}
+
+h1{
+    margin-top:40px;
+    font-size:35px;
+}
+
+.boton{
+    display:block;
+    width:80%;
+    max-width:400px;
+    margin:20px auto;
+    padding:20px;
+    font-size:22px;
+    border:none;
+    border-radius:15px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.boton:hover{
+    transform:scale(1.05);
+}
+
+/* Colores */
+.tiktok{ background:black; color:white; border:2px solid white;}
+.youtube{ background:red; color:white;}
+.instagram{ background:linear-gradient(45deg,#feda75,#d62976,#962fbf,#4f5bd5); color:white;}
+.facebook{ background:#1877F2; color:white;}
+
+footer{
+    margin-top:40px;
+    font-size:14px;
+}
+
+.creditos-btn{
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    color:gray;
+    cursor:pointer;
+    font-size:14px;
+}
+
+#creditos{
+    display:none;
+    animation:bajar 1s ease-out;
+}
+</style>
+</head>
+
+<body>
+
+<div id="principal" class="contenido">
+
+<h1>TODOS MIS CANALES :)</h1>
+
+<button class="boton tiktok"
+onclick="window.location.href='https://www.tiktok.com/@pepepecasasmr?_r=1&_t=ZS-94229YLF6sG'">
+TIKTOK
+</button>
+
+<button class="boton youtube"
+onclick="window.location.href='https://youtube.com/@pepepecasasmr?si=VMMqzwSTAEr2pFv3'">
+YOUTUBE
+</button>
+
+<button class="boton instagram"
+onclick="window.location.href='https://www.instagram.com/pepepecasasmr_?igsh=NHZ5ejM4NWI4eGgw&utm_source=qr'">
+INSTAGRAM
+</button>
+
+<button class="boton facebook"
+onclick="window.location.href='https://www.facebook.com/profile.php?id=1463867987246480&hr=1&wtsid=rdr_1gc7f2j3tw5KQ2oaz'">
+FACEBOOK
+</button>
+
+<footer>
+© pepepecasasmr
+</footer>
+
+</div>
+
+<div class="creditos-btn" onclick="mostrarCreditos()">CREDITOS</div>
+
+<div id="creditos">
+
+<h1>CREDITOS</h1>
+
+<p>Ayudante de la pagina :</p>
+<h2>REDYTOP</h2>
+
+<button class="boton tiktok"
+onclick="window.location.href='https://www.tiktok.com/@redytop'">
+TIKTOK
+</button>
+
+<p>CREADOR DE LA PAGINA :</p>
+<h2>eldelagalletaa</h2>
+
+<button class="boton tiktok"
+onclick="window.location.href='https://www.tiktok.com/@eldelagalletaa'">
+TIKTOK
+</button>
+
+</div>
+
+<script>
+function mostrarCreditos(){
+    document.getElementById("principal").style.display="none";
+    document.querySelector(".creditos-btn").style.display="none";
+    document.getElementById("creditos").style.display="block";
+}
+</script>
+
+</body>
+</html>
